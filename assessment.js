@@ -27,7 +27,7 @@ function diagnose() {
     
     //headerDividedの作成
     const headerDivided = document.createElement('div');
-    headerDivided.appendChild('class', 'card-header');
+    headerDivided.setAttribute('class', 'card-header');
     headerDivided.innerText = '診断結果';
     
     //bodyDividedの作成
