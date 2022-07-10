@@ -24,16 +24,23 @@ function diagnose() {
     
     //診断結果表示エリア
     resultDivided.innerText = '';
-    const header = document.createElement('h3');
-    header.innerText = '診断結果';
-    resultDivided.appendChild(header);
-
+    
+    //headerDividedの作成
+    const headerDivided = document.createElement('div');
+    headerDivided.appendChild('class', 'card-header');
+    headerDivided.innerText = '診断結果';
+    
+    //bodyDividedの作成
+    const bodyDivided = document.createElement('div');
+    bodyDivided.setAttribute('class', 'card-body');
+    
     const paragraph = document.createElement('p');
+    paragraph.setAttribute('class', 'card-text');
     const result = assessment(userName);
     paragraph.innerText = result;
     resultDivided.appendChild(paragraph);
     
-    //TODO　ツイートエリアの作成
+    //ツイートエリアの作成
     tweetDivided.innerText = '';
     const anchor = document.createElement('a');
     const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag='+ encodeURIComponent('あなたのいいところ') + '&ref_src=twsrc%5Etfw';
