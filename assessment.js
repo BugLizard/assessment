@@ -40,6 +40,14 @@ function diagnose() {
     paragraph.innerText = result;
     resultDivided.appendChild(paragraph);
     
+    //resultDividedにBootstrapのスタイルを適用
+    resultDivided.setAttribute('class', 'card');
+    resultDivided.setAttribute('style', 'max-width: 700px;');
+    
+    //headerDividedとbodyDividedをresultDividedに差し込む
+    resultDivided.appendChild(headerDivided);
+    resultDivided.appendChild(bodyDivided);
+    
     //ツイートエリアの作成
     tweetDivided.innerText = '';
     const anchor = document.createElement('a');
