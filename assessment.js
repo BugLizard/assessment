@@ -38,7 +38,7 @@ function diagnose() {
     paragraph.setAttribute('class', 'card-text');
     const result = assessment(userName);
     paragraph.innerText = result;
-    resultDivided.appendChild(paragraph);
+    bodyDivided.appendChild(paragraph);
     
     //resultDividedにBootstrapのスタイルを適用
     resultDivided.setAttribute('class', 'card');
